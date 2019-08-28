@@ -214,6 +214,7 @@ public class SuperAction {
                     
                 case "暂停":
                     //先设置Cell的类型，然后就可以把纯数字作为String类型读进来了
+                	System.out.println("pause wait a minute");
                     row.getCell(testDataColumnIndex).setCellType(Cell.CELL_TYPE_STRING);
                     testData = row.getCell(testDataColumnIndex).getStringCellValue();
                     seleniumUtil.pause(Integer.parseInt(testData));
