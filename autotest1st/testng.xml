@@ -13,7 +13,7 @@
 	<!-- 定义测试模块，用test标签包围 -->
 	<test name="Login" preserve-order="true">
 		<packages>
-			<!--<package name="com.demo.test.testcases.res.channel" />
+			<package name="com.demo.test.testcases.res.channel" />
 			<!--<package name="com.demo.test.testcases.res.home" /> 
 			<package name="com.demo.test.testcases.order.order" /> -->
 		</packages>
