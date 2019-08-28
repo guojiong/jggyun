@@ -11,7 +11,7 @@
 	<parameter name="testurl" value="http://test.jggyun.com/sudoku/" />
 
 	<!-- 定义测试模块，用test标签包围 -->
-	<test name="Login" preserve-order="true">
+	<test name="res.channel" preserve-order="true">
 		<packages>
 			<package name="com.demo.test.testcases.res.channel" />
 			<!--<package name="com.demo.test.testcases.res.home" /> 
