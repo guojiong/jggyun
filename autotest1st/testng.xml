@@ -14,8 +14,8 @@
 	<test name="Login" preserve-order="true">
 		<packages>
 			<!--<package name="com.demo.test.testcases.res.channel" />
-			<package name="com.demo.test.testcases.res.home" /> -->
-			<package name="com.demo.test.testcases.order.order" /> 
+			<!--<package name="com.demo.test.testcases.res.home" /> 
+			<package name="com.demo.test.testcases.order.order" /> -->
 		</packages>
 	</test>
 
