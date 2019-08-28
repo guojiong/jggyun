@@ -114,6 +114,14 @@
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<!-- 加入maven-surefire-plugin插件用来使用maven执行用例，其中suiteXmlFile配置的就是testNG用例执行文件的地址 -->
   				<groupId>org.apache.maven.plugins</groupId>
   				<artifactId>maven-surefire-plugin</artifactId>
