@@ -9,6 +9,11 @@ from time import sleep
 
 class queryorder(unittest.TestCase):
     
+    def setUp(self):
+        load = 'http://116.62.211.37:8605/login'
+        response = requests.post(url=load,data='{"start":0,"limit":100,"userId":"456151205748412416","gmtStart":"2019-10-30","gmtEnd":"2019-10-30"}')
+        res_data = response.json()
+    
     def test_query_all_nomal(self):
         url = 'http://116.62.211.37:8607/pub/order/queryAllOrder'
         response = requests.post(url=url,data='{"start":0,"limit":100,"userId":"456151205748412416","gmtStart":"2019-10-30","gmtEnd":"2019-10-30"}')

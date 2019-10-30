@@ -18,7 +18,7 @@ discover = unittest.defaultTestLoader.discover(test_Dir, pattern='queryorder.py'
 #定义报告的的文件格式
 now = time.strftime("%y-%m-%d %H-%M-%S")
 # report_name = report_Dir+'/'+'test_report.html'
-report_name = 'report/' + 'test_report_' + now +'.html'
+report_name = '../report/' + 'test_queryorder_' + now +'.html'
 
 #执行测试用例生成测试报告
 with open(report_name, 'wb') as f:

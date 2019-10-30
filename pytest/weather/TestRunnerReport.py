@@ -12,7 +12,7 @@ test_Dir = ''
 report_Dir = ''
 
 #加载测试用例
-discover = unittest.defaultTestLoader.discover(test_Dir, pattern='testcase/queryorder.py')
+discover = unittest.defaultTestLoader.discover(test_Dir, pattern='weather/__init__.py')
 # s = unittest.TestSuite()  # 实例化
 #     s.addTests(unittest.TestLoader().loadTestsFromTestCase(make))  # 加载用例
 #定义报告的的文件格式
