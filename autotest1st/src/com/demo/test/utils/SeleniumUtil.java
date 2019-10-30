@@ -942,4 +942,12 @@ public class SeleniumUtil {
     	}
 	}
     
+    
+    public void clickByOtherElement(String testData, WebElement transferElement) {
+    	String[] testDataSplit = testData.split("By=");
+    	if(transferElement!=null) {
+    		transferElement.findElement(By.xpath(testDataSplit[0])).findElement(By.xpath(testDataSplit[1])).click();
+    	}
+	}
+    
 }

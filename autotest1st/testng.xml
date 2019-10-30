@@ -13,9 +13,10 @@
 	<!-- 定义测试模块，用test标签包围 -->
 	<test name="res.channel" preserve-order="true">
 		<packages>
-			<package name="com.demo.test.testcases.res.channel" />
-			<!--<package name="com.demo.test.testcases.res.home" /> 
+			<!--<package name="com.demo.test.testcases.res.channel" />
+			<package name="com.demo.test.testcases.res.home" /> 
 			<package name="com.demo.test.testcases.order.order" /> -->
+			<package name="com.demo.test.testcases.res.merchant" />
 		</packages>
 	</test>
 

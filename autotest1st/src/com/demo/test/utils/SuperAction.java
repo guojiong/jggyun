@@ -443,6 +443,12 @@ public class SuperAction {
                 	seleniumUtil.doubleClick(testData, seleniumUtil.findElementsBy(getLocateWay(locateSplit[0], locateSplit[1])));
                 	break;
                 	
+                case "点击 - byOther":
+                	testData = row.getCell(testDataColumnIndex).getStringCellValue();
+                	locator = row.getCell(locateColumnIndex).getStringCellValue();
+                	locateSplit = getPageElementLocator(sheet, i, locateColumnIndex,locator.split("\\.")[0]);
+                	seleniumUtil.clickByOtherElement(testData, seleniumUtil.findElementBy(getLocateWay(locateSplit[0], locateSplit[1])));
+                	
                 default:
                         logger.error("你输入的操作：["+action+"]不被支持，请自行添加");
                         Assert.fail("你输入的操作：["+action+"]不被支持，请自行添加");
