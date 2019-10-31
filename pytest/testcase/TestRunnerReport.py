@@ -23,6 +23,6 @@ report_name = '../report/' + 'test_queryorder_' + now +'.html'
 #执行测试用例生成测试报告
 with open(report_name, 'wb') as f:
     runner=HTMLTestRunner.HTMLTestRunner(
-        stream=f,title="Weather API Test Report",
-        description="China City Weather Test Report", tester="GJ")
+        stream=f,title="OrderQuery API Test Report",
+        description="Order Query Fun Test Report", tester="GJ")
     runner.run(discover)
