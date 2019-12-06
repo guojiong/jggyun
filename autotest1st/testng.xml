@@ -8,7 +8,7 @@
 	<!-- 页面元素10秒不出现超时时间 -->
 	<parameter name="timeOut" value="20" />
 	<!-- 定义测试的站点 -->
-	<parameter name="testurl" value="http://test.jggyun.com/sudoku/" />
+	<parameter name="testurl" value="http://116.62.211.37:10080/sudoku/" />
 
 	<!-- 定义测试模块，用test标签包围 -->
 	<test name="res.channel" preserve-order="true">
