@@ -20,25 +20,25 @@ class Post(models.Model):
     tag=models.ManyToManyField(Tag, blank=True)
     views=models.PositiveIntegerField(default=0)  # 阅读量
     
-class TestCase():
-    id=models.CharField(max_length=32)
+class TestCase(models.Model):
+    id=models.CharField(primary_key=True, max_length=32)
     CaseName=models.CharField(max_length=128)
     
-class TestStep():
-    id=models.CharField(max_length=32)
-    TestCaseId=models.ForeignKey(TestCase, blank=False)
+class TestStep(models.Model):
+    id=models.CharField(primary_key=True, max_length=32)
+    TestCaseId=models.ForeignKey(TestCase, on_delete=models.SET(True))
     StepName=models.CharField(max_length=128)
     
-class TestSuite():
-    id=models.CharField(max_length=32)
+class TestSuite(models.Model):
+    id=models.CharField(primary_key=True, max_length=32)
     SuiteName=models.CharField(max_length=128)
     
-class CaseToSuite():
-    id=models.CharField(max_length=32)
-    TestCaseId=models.ForeignKey(TestCase, blank=False)
-    TestSuiteId=models.ForeignKey(TestSuite, blank=False)
+class CaseToSuite(models.Model):
+    id=models.CharField(primary_key=True, max_length=32)
+    TestCaseId=models.ManyToManyField(TestCase, blank=True)
+    TestSuiteId=models.ManyToManyField(TestSuite, blank=True)
     
-class TestReport():
-    id=models.CharField(max_length=32)
+class TestReport(models.Model):
+    id=models.CharField(primary_key=True, max_length=32)
     ReportName=models.CharField(max_length=128)
     

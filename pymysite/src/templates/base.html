@@ -1,24 +1,48 @@
+{% load static%}
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>测试管理</title>
+	<meta charset="utf-8">
+	<title>测试管理</title>
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+	<link rel="stylesheet" href="{% static 'bootstrap/css/mysite.css' %}" />
+	<link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.min.js' %}" />
+	<link rel="stylesheet" href="{% static 'bootstrap/js/jquery.min.js' %}" />
+	<script>
+		function query(){
+			/* testcase.action="/base/"; */
+			var ar = "base";
+			document.getElementById("testcase").submit()
+		}
+	</script>
 </head>
-<body>
-<input type="button" value="添加用户"'/>
-<a href="/usermanage">用户管理</a>
-<h1>用户列表：</h1>
-    <table border="0">
-		<thead style="background-color:antiquewhite;"><tr><td>用户名</td><td>密码</td></tr></thead>
-		<tbody style="background-color:silver;">
-			{% for item in data %}
-				<tr>
-					<td>{{item.user}}</td>
-					<td>{{item.passwd}}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-	
+<body style="margin: 18px;">
+	<header>
+		<div>
+			<p >欢迎回来！{{user}} |
+			<a href="/base/">用户管理</a>
+		</div>
+	</header>
+	<section>
+		<div>
+			<h1>用户列表：</h1>
+			<form action="/base/" id="testcase" method="Post">{% csrf_token %}
+				<input type="submit" onclick="query();" class="btn btn-midlle" style="margin: 8px;" value="提交"/>
+			    <table border="0">
+					<thead style="background-color:antiquewhite;">
+						<tr><td>用户名</td><td>密码</td></tr>
+					</thead>
+					<tbody style="background-color:silver;">
+						{% for item in data %}
+							<tr>
+								<td>{{item.user}}</td>
+								<td>{{item.passwd}}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</section>
 </body>
 </html>

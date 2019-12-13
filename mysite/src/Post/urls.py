@@ -5,4 +5,5 @@ app_name = 'Post'
 urlpatterns=[
     # 这里放映射的view
     path('index/', views.index),
+    path('testcase/', views.TestCase),
 ]

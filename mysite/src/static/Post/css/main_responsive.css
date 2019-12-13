@@ -208,7 +208,7 @@ header ul.social li a.gplus{
 
 .features .feature{
     display: block;
-    width: 28.83333333333333%;
+    width: 100%;
     height: auto;
     float: left;
     margin-right: 6.666666666666667%;
@@ -222,14 +222,21 @@ header ul.social li a.gplus{
 
 .feature .ficon{
     display: block;
-    width: 18.78612716763006%;
+    width: 6%;
     float: left;
-    margin-right: 11.5606936416185%;
+    margin-right: 2%;
 }
 
 .feature .details_exp{
     display: block;
-    width: 69.36416184971098%;
+    width: 20%;
+    float: left;
+    margin-right: 5%;
+}
+
+.feature .details_pic{
+    display: block;
+    width: 67%;
     float: left;
 }
 

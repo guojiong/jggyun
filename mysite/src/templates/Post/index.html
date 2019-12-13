@@ -2,13 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Crafty |  Free HTML5/CSS3 template</title>
+	<title>测试管理</title>
 	<meta charset="utf-8">
 	<meta name="author" content="">
 	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="{% static 'Post/css/reset.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'Post/css/main_responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/html/css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'bootstrap/html/css/bootstrap-responsive.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/html/css/unicorn.login.css' %}" />
     <script type="text/javascript" src="{% static 'Post/js/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'Post/js/carouFredSel.js' %}"></script>
     <script type="text/javascript" src="{% static 'Post/js/main.js' %}"></script>
@@ -21,8 +24,8 @@
 			<a href="#" class="menu_icon" id="menu_icon"></a>
 			<nav id="nav_menu">
 				<ul>
-					<li><a href="#">首页</a></li>
-					<li><a href="#">用例管理</a></li>
+					<li><a href="../index/">首页</a></li>
+					<li><a href="../testcase/">用例管理</a></li>
 					<li><a href="#">执行计划</a></li>
 					<li><a href="#">执行结果</a></li>
 				</ul>
@@ -35,18 +38,20 @@
 			</ul>
 		</div>
 	</header><!--  End Header  -->
-
+	{% if tag == 'index' %}
 	<section class="features">
-
 		<div class="wrapper">
 				<div class="feature">
 					<div class="ficon">
-						<img src="img/icon1.png" alt="">
+						<img src="{% static 'Post/img/icon1.png' %}" alt="">
 					</div>
 					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
+						<h3>京东主站对接订单中台</h3>
+						<p>总的缺陷数量以及缺陷等级划分</p>
 						<a href="#">more details<span>→</span></a>
+					</div>
+					<div class="details_pic">
+						<img src="{% static 'Post/img/jdzzbugyzd.png' %}" alt="">
 					</div>
 				</div>
 				<div class="feature">
@@ -54,52 +59,38 @@
 						<img src="img/icon2.png" alt="">
 					</div>
 					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
+						<h3>Excepteur sint.1</h3>
 						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
 						<a href="#">more details<span>→</span></a>
 					</div>
 				</div>
+				
+			</div>
+		</section>
+	{% endif %}
+	
+	{% if tag == 'testcase' %}
+	<section class="features">
+
+		<div class="wrapper">
 				<div class="feature">
-					<div class="ficon">
-						<img src="img/icon3.png" alt="">
-					</div>
-					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
-					</div>
+					模块：<input type="text" name="module"/>
+					名称：<input type="text" name="casename"/>
+					<input type="button" class="btn btn-inverse" name="submit" value="查询"/>
+					<input type="button" class="btn btn-inverse" name="reset" value="重置"/>
 				</div>
 				<div class="feature">
 					<div class="ficon">
-						<img src="img/icon4.png" alt="">
+						<img src="img/icon2.png" alt="">
 					</div>
 					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
-					</div>
-				</div>
-				<div class="feature">
-					<div class="ficon">
-						<img src="img/icon5.png" alt="">
-					</div>
-					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
-						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
-						<a href="#">more details<span>→</span></a>
-					</div>
-				</div>				
-				<div class="feature">
-					<div class="ficon">
-						<img src="img/icon6.png" alt="">
-					</div>
-					<div class="details_exp">
-						<h3>Excepteur sint.</h3>
+						<h3>Excepteur sint.1</h3>
 						<p>Coccaecat cupidatat aliqu proident sunt in culpa qui officia deserunt mollit anim.</p>
 						<a href="#">more details<span>→</span></a>
 					</div>
 				</div>
 			</div>
 		</section>
+	{% endif %}
 </body>
 </html>

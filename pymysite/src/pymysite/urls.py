@@ -25,6 +25,7 @@ urlpatterns = [
     path('login/', views.login),
     path('base/', views.base),
     path('usermanage/',views.usermanage),
+    path('validation/', views.validation),
 ]
 """from django.conf.urls import url, include
 from django.contrib import admin

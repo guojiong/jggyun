@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Post',
+    'testapp',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'root',
         'PASSWORD':'123456',
-        'HOST':'192.168.182.134',
+        'HOST':'192.168.182.133',
         'PORT':'3306'
     }
 }

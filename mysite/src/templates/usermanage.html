@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试管理</title>
+</head>
+<body>
+<a href="/base">返回主页面</a>
+<h1>用户列表：</h1>
+    <table border="0">
+		<thead style="background-color:antiquewhite;"><tr><td>用户名</td><td>密码</td></tr></thead>
+		<tbody style="background-color:silver;">
+			{% for item in data %}
+				<tr>
+					<td>{{item.user}}</td>
+					<td>{{item.passwd}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
+</body>
+</html>

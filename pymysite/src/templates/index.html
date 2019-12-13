@@ -1,8 +1,10 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" />
 </head>
 <head>
 	<script>
@@ -17,21 +19,24 @@
 				alert("密码不能为空");
 				return false;
 			}
+			
+			document.getElementById("login").submit()
 		}
 	</script>
 </head>
 <body>
-    <h1 style="background-color:antiquewhite;color: black">用户登录</h1>
+    <h1 style="margin: 18px;background-color:antiquewhite;color: black;">用户登录</h1>
     {% if message != "" %}
-		<p style="color: red;">{{message}}
+		<p style="margin: 18px;color: red;">{{message}}
 	{% endif %}
     
-    <form name="login" onsubmit="return validation()" action="/base/" method="post" style="text-align:center;">
+    <form style="margin: 18px;" id="login" action="/validation/" method="post" style="text-align:center;">
     	{% csrf_token %}   <!--跨站请求保护机制 加入这行 -->
     	<table style="text-align:center;">
     		<tr><td>用户名:<input type="text" name="username" /></td></tr>
 	    	<tr><td>密&nbsp;&nbsp;&nbsp;码:<input type="password" name="password" /></td></tr>
-	    	<tr><td><input type="submit" value="提交"/></td></tr>
+	    	<tr><td><input type="button" class="btn btn-midlle" style="margin: 8px;" onclick="validation();" value="提交"/>
+	    	<input type="button" class="btn btn-midlle" style="margin: 8px;" value="重置"/></td></tr>
 	    </table>
     </form>
 </body>
